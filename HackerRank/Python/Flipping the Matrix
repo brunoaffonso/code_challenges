@@ -20,13 +20,14 @@ def flippingMatrix(matrix):
     n = len(matrix) // 2
     total_sum = 0
     
-    for i in range(n):
-        for j in range(n):
+    for row in range(n):
+        for column in range(n):
             total_sum += max(
-                matrix[i][j],
-                matrix[i][2 * n - 1 - j],
-                matrix[2 * n - 1 - i][j],
-                matrix[2 * n - 1 - i][2 * n - 1 - j])
+                matrix[row][column],
+                matrix[row][2 * n - 1 - column],
+                matrix[2 * n - 1 - row][column],
+                matrix[2 * n - 1 - row][2 * n - 1 - column]
+            )
     
     return total_sum
             
