@@ -13,6 +13,8 @@ import sys
 # The function accepts STRING s as parameter.
 #
 
+# =========== my code ==========
+
 def timeConversion(s):
     # Write your code here
     hour_12 = s[:2]
@@ -32,7 +34,8 @@ def timeConversion(s):
         hour_24 = hour_12
         
     return f'{hour_24}:{minute}:{seg}'
-    
+
+# ==============================    
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
