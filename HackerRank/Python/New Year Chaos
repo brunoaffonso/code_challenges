@@ -1,0 +1,45 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'minimumBribes' function below.
+#
+# The function accepts INTEGER_ARRAY q as parameter.
+#
+
+# ========== my code ==========
+
+def minimumBribes(q):
+    # Write your code here
+    bribes = 0
+    i = 0
+    
+    while len(q) > i:
+        num_bribes = len(list(filter(lambda x: x < q[i], q[i:])))
+        
+        if num_bribes >= 3:
+            print('Too chaotic')
+            return None
+        else:
+            bribes += num_bribes
+        i += 1
+    
+    print(bribes)
+    return None
+
+# =============================
+    
+if __name__ == '__main__':
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        n = int(input().strip())
+
+        q = list(map(int, input().rstrip().split()))
+
+        minimumBribes(q)
