@@ -15,22 +15,41 @@ import sys
 # ========== my code ==========
 
 def minimumBribes(q):
-    # Write your code here
     bribes = 0
-    i = 0
     
-    while len(q) > i:
-        num_bribes = len(list(filter(lambda x: x < q[i], q[i:])))
+    for i in range(len(q)):
+        if q[i] - (i + 1) > 2:
+            print("Too chaotic")
+            return
         
-        if num_bribes >= 3:
-            print('Too chaotic')
-            return None
-        else:
-            bribes += num_bribes
-        i += 1
+        for j in range(max(0, q[i] - 2), i):
+            if q[j] > q[i]:
+                bribes += 1
     
     print(bribes)
-    return None
+
+# def minimumBribes(q):
+#     # Write your code here
+#     bribes = 0
+#     i = 0
+    
+#     while len(q) > i:
+#         num_bribes = 0
+#         for j in q[i:]:
+#             if j < q[i]:
+#                 num_bribes += 1
+        
+#         # num_bribes = len(list(filter(lambda x: x < q[i], q[i:])))
+        
+#         if num_bribes >= 3:
+#             print('Too chaotic')
+#             return None
+#         else:
+#             bribes += num_bribes
+#         i += 1
+    
+#     print(bribes)
+#     return None
 
 # =============================
     
