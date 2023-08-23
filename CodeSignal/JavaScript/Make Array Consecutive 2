@@ -1,0 +1,14 @@
+function solution(statues) {
+  min = Math.min(...statues);
+  max = Math.max(...statues);
+  statues_count = 0;
+
+  statues.sort((a, b) => a - b);
+
+  for (i = min; i <= max; i++) {
+    if (!statues.includes(i)) {
+      statues_count += 1;
+    }
+  }
+  return statues_count;
+}
