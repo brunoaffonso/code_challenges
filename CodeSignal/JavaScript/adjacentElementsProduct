@@ -1,0 +1,10 @@
+function solution(inputArray) {
+  let biggest_sum = -Number.MAX_VALUE;
+
+  for (i = 1; i < inputArray.length; i++) {
+    if (inputArray[i] * inputArray[i - 1] > biggest_sum) {
+      biggest_sum = inputArray[i] * inputArray[i - 1];
+    }
+  }
+  return biggest_sum;
+}
