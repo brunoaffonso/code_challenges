@@ -41,6 +41,8 @@ class Result {
         weekDays.add("THURSDAY");
         weekDays.add("FRIDAY");
         weekDays.add("SATURDAY");
+
+        // String[] weekDays = {"SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"};
         
         // String dayWeek = "";
         
