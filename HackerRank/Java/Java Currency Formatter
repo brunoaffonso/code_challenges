@@ -5,10 +5,9 @@ import java.text.NumberFormat;
 public class Solution {
 
     public static void main(String[] args) {
-        
         Scanner scanner = new Scanner(System.in);
-        
-        Double value = scanner.nextDouble();
+        double value = scanner.nextDouble();
+        scanner.close();
                
         Locale usLocale = new Locale("en", "US");
         NumberFormat usCurrencyFormatter = NumberFormat.getCurrencyInstance(usLocale);
@@ -18,18 +17,16 @@ public class Solution {
         Locale indianLocale = new Locale("en", "IN");
         NumberFormat inCurrencyFormatter = NumberFormat.getCurrencyInstance(indianLocale);
         String inFormattedValue = inCurrencyFormatter.format(value);
-        System.out.printf("India %s%n", inFormattedValue);
+        System.out.printf("India: %s%n", inFormattedValue);
         
         Locale chinaLocale = new Locale("zh", "CN");
         NumberFormat cnCurrencyFormatter = NumberFormat.getCurrencyInstance(chinaLocale);
         String cnFormattedValue = cnCurrencyFormatter.format(value);
-        System.out.printf("China %s%n", cnFormattedValue);
+        System.out.printf("China: %s%n", cnFormattedValue);
         
         Locale frenchLocale = new Locale("fr", "FR");
         NumberFormat frCurrencyFormatter = NumberFormat.getCurrencyInstance(frenchLocale);
         String frFormattedValue = frCurrencyFormatter.format(value);
-        System.out.printf("France %s%n", frFormattedValue);
-        
-        
+        System.out.printf("France: %s%n", frFormattedValue);
     }
 }
