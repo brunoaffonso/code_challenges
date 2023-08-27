@@ -1,0 +1,7 @@
+function solution(n) {
+  s = n + '';
+  s = s.split('');
+  acc = 0;
+  s.forEach((n) => (acc += Number(n)));
+  return acc;
+}

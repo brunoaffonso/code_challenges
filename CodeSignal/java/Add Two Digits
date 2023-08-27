@@ -1,0 +1,12 @@
+int solution(int n) {
+    
+    String s = n + "";
+    int sum = 0;
+    
+    for (int i = 0; i < s.length(); i++) {
+        // System.out.println(Integer.parseInt(s.substring(i)));
+        sum += Character.getNumericValue(s.charAt(i));
+    }
+    
+    return sum;
+}
