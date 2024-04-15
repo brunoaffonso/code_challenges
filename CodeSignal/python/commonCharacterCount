@@ -1,0 +1,10 @@
+def solution(s1, s2):
+    characters_list = list(s1)
+    characters = 0
+    for i in s2:
+        if i in characters_list:
+            characters_list.remove(i)
+            characters += 1
+        else:
+            pass
+    return characters
