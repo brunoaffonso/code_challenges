@@ -1,0 +1,12 @@
+def solution(matrix):
+    free_room_index = []
+    sum = 0
+    for floor in matrix:
+        for index, room in enumerate(floor):
+            if index in free_room_index:
+                pass
+            elif room == 0:
+                free_room_index.append(index)
+            else:
+                sum += room
+    return sum                
