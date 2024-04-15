@@ -1,0 +1,12 @@
+def solution(inputArray):
+    longest_strings = []
+    longest_string = 0
+    for i in inputArray:
+        if len(i) > longest_string:
+            longest_strings = [i]
+            longest_string = len(i)
+        elif len(i) == longest_string:
+            longest_strings.append(i)
+        else:
+            pass
+    return longest_strings
