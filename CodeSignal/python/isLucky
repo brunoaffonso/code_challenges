@@ -1,0 +1,5 @@
+def solution(n):
+    sum_1 = sum(int(i) for i in list(str(n)[:len(str(n))//2]))
+    sum_2 = sum(int(i) for i in list(str(n)[len(str(n))//2:]))
+    return sum_1 == sum_2
+    
