@@ -1,0 +1,19 @@
+def solution(inputString):
+    output = ''
+    level = 0
+    inverted_string = {}
+    for i in inputString:
+        if i == '(':
+            level += 1
+            inverted_string[level] = ''
+        elif i == ')':
+            level -= 1
+            if level == 0:
+                output += inverted_string[level + 1][::-1]
+            else:
+                inverted_string[level] += inverted_string[level + 1][::-1]
+        elif level != 0:
+            inverted_string[level] += i
+        else:
+            output += i
+    return output
