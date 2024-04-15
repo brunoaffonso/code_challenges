@@ -8,5 +8,6 @@ def solution(a):
             new_list.append(n)
     
     new_list.sort()
-    [new_list.insert(i, -1) for i in trees_list]
+    for i in trees_list:
+        new_list.insert(i, -1)
     return new_list
