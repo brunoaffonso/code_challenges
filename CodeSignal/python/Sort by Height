@@ -1,0 +1,12 @@
+def solution(a):
+    trees_list = []
+    new_list = []
+    for index, n in enumerate(a):
+        if n == -1:
+            trees_list.append(index)
+        else:
+            new_list.append(n)
+    
+    new_list.sort()
+    [new_list.insert(i, -1) for i in trees_list]
+    return new_list
