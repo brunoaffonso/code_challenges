@@ -1,0 +1,13 @@
+def solution(a):
+    team_1 = 0
+    team_2 = 0
+    x = True
+    for i in a:
+        if x:
+            team_1 += i
+            x = False
+        else:
+            team_2 += i
+            x = True
+    
+    return [team_1, team_2]
